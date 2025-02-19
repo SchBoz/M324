@@ -18,8 +18,10 @@
 <main>
     <h1>SvelteKit Agendas App</h1>
     <div class="add-agenda">
-        <input class="agenda-input" bind:value={newAgenda} placeholder="Add a new agenda">
-        <button class="add-button" on:click={addAgenda}>Add</button>
+        <form>
+            <input class="agenda-input" bind:value={newAgenda} placeholder="Add a new agenda">
+            <button class="add-button" on:click={addAgenda}>Add</button>
+        </form>
     </div>
     <ul class="agenda-list">
         {#each agenda as agenda, index (agenda)}
