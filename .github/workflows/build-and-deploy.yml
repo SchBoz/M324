@@ -14,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x, 22.x]
+        node-version: [22.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -29,6 +29,7 @@ jobs:
     #- run: npm test
 
   deploy:
+    needs: build  # Ensures deploy runs after build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -36,12 +37,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Download Build Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build
+          path: ./build
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
           path: './build'
       - name: Deploy to GitHub Pages
         id: deployment
