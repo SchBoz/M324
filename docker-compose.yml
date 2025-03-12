@@ -1,0 +1,5 @@
+services:
+  todo-app:
+    image: m324
+    ports:
+      - "80:80"
