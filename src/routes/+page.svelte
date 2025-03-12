@@ -1,11 +1,13 @@
 <script>
     let agenda = [];
     let newAgenda = '';
+    let inputRef;
 
     function addAgenda() {
         if (newAgenda) {
             agenda = [...agenda, newAgenda];
             newAgenda = '';
+            inputRef.focus();
         }
     }
 
@@ -19,7 +21,7 @@
     <h1>SvelteKit Agendas App</h1>
     <div class="add-agenda">
         <form>
-            <input class="agenda-input" bind:value={newAgenda} placeholder="Add a new agenda">
+            <input class="agenda-input" bind:this={inputRef} bind:value={newAgenda} placeholder="Add a new agenda">
             <button class="add-button" on:click={addAgenda}>Add</button>
         </form>
     </div>
