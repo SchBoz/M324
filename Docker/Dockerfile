@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:latest as build
 
 # Setze das Arbeitsverzeichnis im Container
 WORKDIR /app
@@ -16,7 +16,7 @@ COPY ../. .
 FROM httpd:2.4
 
 # Kopiere die gebauten Dateien in das Apache-Verzeichnis
-COPY --from=builder /app/build /usr/local/apache2/htdocs/
+COPY --from=build /app/build /usr/local/apache2/htdocs/
 
 # Exponiere den Standardport von Apache
 EXPOSE 80
