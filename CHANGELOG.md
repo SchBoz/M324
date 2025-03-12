@@ -1,3 +1,16 @@
+# [0.6.0](https://github.com/SchBoz/M324/compare/v0.5.0...v0.6.0) (2025-03-12)
+
+
+### Bug Fixes
+
+* action order ([572a741](https://github.com/SchBoz/M324/commit/572a7417e58879c4da2c291b6a51c79db5045dd1))
+* dockerfile ([485e057](https://github.com/SchBoz/M324/commit/485e057fc9574153c805f0d0856fe6e8205d5cc5))
+
+
+### Features
+
+* docker compose file ([65ae7b1](https://github.com/SchBoz/M324/commit/65ae7b14e56eab24272e2dc4273b2ac05080df7a))
+
 # [0.5.0](https://github.com/SchBoz/M324/compare/v0.4.0...v0.5.0) (2025-03-12)
 
 
