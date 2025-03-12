@@ -1,3 +1,10 @@
+# [0.5.0](https://github.com/SchBoz/M324/compare/v0.4.0...v0.5.0) (2025-03-12)
+
+
+### Features
+
+* **release:** add Dockerfile and docker-compose file ([#17](https://github.com/SchBoz/M324/issues/17)) ([39e7725](https://github.com/SchBoz/M324/commit/39e77258f714f41b37aa75be67758caeb46020fd))
+
 # [0.4.0](https://github.com/SchBoz/M324/compare/v0.3.0...v0.4.0) (2025-03-05)
 
 
